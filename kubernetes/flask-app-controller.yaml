@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  # 여기에 정의된 이름으로 ReplicationController, POD에 영향을 준다.
+  # ReplicationController 따로 POD 따로 지정할 수 없다.
+  name: rc-flask-app
+  # labels:
+  #   name: flask-app
+spec:
+  replicas: 3
+  selector:
+    name: flask-app
+  template:
+    metadata:
+      labels:
+        name: flask-app
+    spec:
+      containers:
+      - name: flask-app
+        image: shiftcats/flaskapp:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5000

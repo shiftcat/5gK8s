@@ -1,0 +1,298 @@
+version: '3'
+services:
+  mysql:
+    container_name: mysql
+    image: mysql:5.7
+    ports:
+      - '3306:3306'
+    volumes:
+      - '${MYSQL_DATA}:/var/lib/mysql'
+      - '${MYSQL_CONF}:/etc/mysql/conf.d'
+    environment:
+        - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+        - MYSQL_DATABASE=5gk8s_db
+        - MYSQL_USER=${MYSQL_USER}
+        - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+    command: ['--lower_case_table_names=1', '--max_connections=1024']
+
+  flaskapp1:
+    container_name: flaskapp1
+    image: flaskapp:latest
+    build: ./flaskapp
+    depends_on:
+      - mysql
+    links:
+      - mysql
+    environment:
+      - DATABASE_SERVER=mysql
+      - DATABASE_PORT=3306
+      - DATABASE_NAME=5gk8s_db
+      - DATABASE_USER=${MYSQL_USER}
+      - DATABASE_PASSWD=${MYSQL_PASSWORD}
+
+
+  flaskapp2:
+    container_name: flaskapp2
+    image: flaskapp:latest
+    build: ./flaskapp
+    depends_on:
+      - mysql
+    links:
+      - mysql
+    environment:
+      - DATABASE_SERVER=mysql
+      - DATABASE_PORT=3306
+      - DATABASE_NAME=5gk8s_db
+      - DATABASE_USER=${MYSQL_USER}
+      - DATABASE_PASSWD=${MYSQL_PASSWORD}
+
+  flaskapp3:
+    container_name: flaskapp3
+    image: flaskapp:latest
+    build: ./flaskapp
+    depends_on:
+      - mysql
+    links:
+      - mysql
+    environment:
+      - DATABASE_SERVER=mysql
+      - DATABASE_PORT=3306
+      - DATABASE_NAME=5gk8s_db
+      - DATABASE_USER=${MYSQL_USER}
+      - DATABASE_PASSWD=${MYSQL_PASSWORD}
+
+  flaskapp4:
+    container_name: flaskapp4
+    image: flaskapp:latest
+    build: ./flaskapp
+    depends_on:
+      - mysql
+    links:
+      - mysql
+    environment:
+      - DATABASE_SERVER=mysql
+      - DATABASE_PORT=3306
+      - DATABASE_NAME=5gk8s_db
+      - DATABASE_USER=${MYSQL_USER}
+      - DATABASE_PASSWD=${MYSQL_PASSWORD}
+
+  flaskapp5:
+    container_name: flaskapp5
+    image: flaskapp:latest
+    build: ./flaskapp
+    depends_on:
+      - mysql
+    links:
+      - mysql
+    environment:
+      - DATABASE_SERVER=mysql
+      - DATABASE_PORT=3306
+      - DATABASE_NAME=5gk8s_db
+      - DATABASE_USER=${MYSQL_USER}
+      - DATABASE_PASSWD=${MYSQL_PASSWORD}
+
+  flaskapp6:
+    container_name: flaskapp6
+    image: flaskapp:latest
+    build: ./flaskapp
+    depends_on:
+      - mysql
+    links:
+      - mysql
+    environment:
+      - DATABASE_SERVER=mysql
+      - DATABASE_PORT=3306
+      - DATABASE_NAME=5gk8s_db
+      - DATABASE_USER=${MYSQL_USER}
+      - DATABASE_PASSWD=${MYSQL_PASSWORD}
+
+  flaskapp7:
+    container_name: flaskapp7
+    image: flaskapp:latest
+    build: ./flaskapp
+    depends_on:
+      - mysql
+    links:
+      - mysql
+    environment:
+      - DATABASE_SERVER=mysql
+      - DATABASE_PORT=3306
+      - DATABASE_NAME=5gk8s_db
+      - DATABASE_USER=${MYSQL_USER}
+      - DATABASE_PASSWD=${MYSQL_PASSWORD}
+
+  flaskapp8:
+    container_name: flaskapp8
+    image: flaskapp:latest
+    build: ./flaskapp
+    depends_on:
+      - mysql
+    links:
+      - mysql
+    environment:
+      - DATABASE_SERVER=mysql
+      - DATABASE_PORT=3306
+      - DATABASE_NAME=5gk8s_db
+      - DATABASE_USER=${MYSQL_USER}
+      - DATABASE_PASSWD=${MYSQL_PASSWORD}
+
+  flaskapp9:
+    container_name: flaskapp9
+    image: flaskapp:latest
+    build: ./flaskapp
+    depends_on:
+      - mysql
+    links:
+      - mysql
+    environment:
+      - DATABASE_SERVER=mysql
+      - DATABASE_PORT=3306
+      - DATABASE_NAME=5gk8s_db
+      - DATABASE_USER=${MYSQL_USER}
+      - DATABASE_PASSWD=${MYSQL_PASSWORD}
+
+  flaskapp10:
+    container_name: flaskapp10
+    image: flaskapp:latest
+    build: ./flaskapp
+    depends_on:
+      - mysql
+    links:
+      - mysql
+    environment:
+      - DATABASE_SERVER=mysql
+      - DATABASE_PORT=3306
+      - DATABASE_NAME=5gk8s_db
+      - DATABASE_USER=${MYSQL_USER}
+      - DATABASE_PASSWD=${MYSQL_PASSWORD}
+
+  flaskapp11:
+    container_name: flaskapp11
+    image: flaskapp:latest
+    build: ./flaskapp
+    depends_on:
+      - mysql
+    links:
+      - mysql
+    environment:
+      - DATABASE_SERVER=mysql
+      - DATABASE_PORT=3306
+      - DATABASE_NAME=5gk8s_db
+      - DATABASE_USER=${MYSQL_USER}
+      - DATABASE_PASSWD=${MYSQL_PASSWORD}
+
+  flaskapp12:
+    container_name: flaskapp12
+    image: flaskapp:latest
+    build: ./flaskapp
+    depends_on:
+      - mysql
+    links:
+      - mysql
+    environment:
+      - DATABASE_SERVER=mysql
+      - DATABASE_PORT=3306
+      - DATABASE_NAME=5gk8s_db
+      - DATABASE_USER=${MYSQL_USER}
+      - DATABASE_PASSWD=${MYSQL_PASSWORD}
+
+  flaskapp13:
+    container_name: flaskapp13
+    image: flaskapp:latest
+    build: ./flaskapp
+    depends_on:
+      - mysql
+    links:
+      - mysql
+    environment:
+      - DATABASE_SERVER=mysql
+      - DATABASE_PORT=3306
+      - DATABASE_NAME=5gk8s_db
+      - DATABASE_USER=${MYSQL_USER}
+      - DATABASE_PASSWD=${MYSQL_PASSWORD}
+
+  flaskapp14:
+    container_name: flaskapp14
+    image: flaskapp:latest
+    build: ./flaskapp
+    depends_on:
+      - mysql
+    links:
+      - mysql
+    environment:
+      - DATABASE_SERVER=mysql
+      - DATABASE_PORT=3306
+      - DATABASE_NAME=5gk8s_db
+      - DATABASE_USER=${MYSQL_USER}
+      - DATABASE_PASSWD=${MYSQL_PASSWORD}
+
+  flaskapp15:
+    container_name: flaskapp15
+    image: flaskapp:latest
+    build: ./flaskapp
+    depends_on:
+      - mysql
+    links:
+      - mysql
+    environment:
+      - DATABASE_SERVER=mysql
+      - DATABASE_PORT=3306
+      - DATABASE_NAME=5gk8s_db
+      - DATABASE_USER=${MYSQL_USER}
+      - DATABASE_PASSWD=${MYSQL_PASSWORD}
+
+  flaskapp16:
+    container_name: flaskapp16
+    image: flaskapp:latest
+    build: ./flaskapp
+    depends_on:
+      - mysql
+    links:
+      - mysql
+    environment:
+      - DATABASE_SERVER=mysql
+      - DATABASE_PORT=3306
+      - DATABASE_NAME=5gk8s_db
+      - DATABASE_USER=${MYSQL_USER}
+      - DATABASE_PASSWD=${MYSQL_PASSWORD}
+
+  flaskapp17:
+    container_name: flaskapp17
+    image: flaskapp:latest
+    build: ./flaskapp
+    depends_on:
+      - mysql
+    links:
+      - mysql
+    environment:
+      - DATABASE_SERVER=mysql
+      - DATABASE_PORT=3306
+      - DATABASE_NAME=5gk8s_db
+      - DATABASE_USER=${MYSQL_USER}
+      - DATABASE_PASSWD=${MYSQL_PASSWORD}
+
+  loadbalancer:
+      build: ./loadbalancer
+      links:
+          - flaskapp1
+          - flaskapp2
+          - flaskapp3
+          - flaskapp4
+          - flaskapp5
+          - flaskapp6
+          - flaskapp7
+          - flaskapp8
+          - flaskapp9
+          - flaskapp10
+          - flaskapp11
+          - flaskapp12
+          - flaskapp13
+          - flaskapp14
+          - flaskapp15
+          - flaskapp16
+          - flaskapp17
+          # - flaskapp18
+          # - flaskapp19
+          # - flaskapp20
+      ports:
+          - '8001:8080'

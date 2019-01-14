@@ -1,0 +1,34 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: 5gk8sapp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: 5gk8sapp
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: 5gk8sapp
+    spec:
+      containers:
+      - name: 5gk8sapp
+        image: shiftcats/5gk8sapp:0.1
+        imagePullPolicy: Always
+        env:
+        - name: DATABASE_SERVER
+          value: svc-mysqldb-5gk8s
+        - name: DATABASE_PORT
+          value: "3306"
+        - name: DATABASE_NAME
+          value: 5gk8s
+        - name: DATABASE_USER
+          value: 5gk8s-dev
+        - name: DATABASE_PASSWD
+          value: dev@5gk8s!
+        ports:
+        - containerPort: 5000
+          name: 5gk8sapp

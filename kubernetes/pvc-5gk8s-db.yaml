@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-5gk8s-db
+spec:
+  resources:
+    requests:
+      storage: 5Gi
+  accessModes:
+  - ReadWriteOnce
+  storageClassName: normal
+  selector:
+    matchLabels:
+      db: mysql

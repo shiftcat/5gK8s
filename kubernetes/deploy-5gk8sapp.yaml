@@ -20,7 +20,7 @@ spec:
         imagePullPolicy: Always
         env:
         - name: DATABASE_SERVER
-          value: svc-mysqldb-5gk8s
+          value: svc-5gk8s-db
         - name: DATABASE_PORT
           value: "3306"
         - name: DATABASE_NAME

@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: svc-5gk8sapp
+  name: svc-5gk8s-app
 spec:
   type: NodePort
   ports:

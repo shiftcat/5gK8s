@@ -3,7 +3,8 @@ kind: Deployment
 metadata:
   name: 5gk8sapp
 spec:
-  replicas: 3
+  replicas: 10
+  minReadySeconds: 10
   selector:
     matchLabels:
       app: 5gk8sapp
@@ -14,6 +15,23 @@ spec:
       labels:
         app: 5gk8sapp
     spec:
+      affinity:
+        nodeAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+          - weight: 80
+            preference:
+              matchExpressions:
+              - key: kubernetes.io/hostname
+                operator: In
+                values:
+                - kube-worker2
+          - weight: 20
+            preference:
+              matchExpressions:
+              - key: kubernetes.io/hostname
+                operator: In
+                values:
+                - kube-worker1
       containers:
       - name: 5gk8sapp
         image: shiftcats/5gk8sapp:0.1
@@ -32,3 +50,30 @@ spec:
         ports:
         - containerPort: 5000
           name: 5gk8sapp
+        readinessProbe:
+          initialDelaySeconds: 3
+          periodSeconds: 30
+          timeoutSeconds: 1
+          successThreshold: 1
+          failureThreshold: 3
+          httpGet:
+            path: /api/tx/hello
+            port: 5000
+        livenessProbe:
+          initialDelaySeconds: 3
+          periodSeconds: 30
+          timeoutSeconds: 1
+          successThreshold: 1
+          failureThreshold: 3
+          httpGet:
+            path: /api/tx/hello
+            port: 5000
+        securityContext:
+          runAsNonRoot: true
+        resources:
+          requests:
+            cpu: 600m
+            memory: 200Mi
+          # limits:
+          #   cpu: 600m
+          #   memory: 300Mi

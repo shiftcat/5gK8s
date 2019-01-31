@@ -39,4 +39,7 @@ RUN pip3.6 install -r requirements.txt
 
 EXPOSE 5000
 
+RUN useradd -u 1004 apiuser
+USER 1004
+
 ENTRYPOINT [ "./run.sh" ]

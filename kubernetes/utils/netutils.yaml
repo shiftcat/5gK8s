@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: netutils
+spec:
+  selector:
+    matchLabels:
+      app: netutils
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: netutils
+    spec:
+      containers:
+      - name: netutils
+        image: hwchiu/netutils
+      - name: kb-proxy
+        image: luksa/kubectl-proxy:1.6.2

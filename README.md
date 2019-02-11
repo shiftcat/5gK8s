@@ -1,12 +1,16 @@
 
 ### .env File
 MYSQL_DATA=
+
 MYSQL_CONF=
+
 MYSQL_ROOT_PASSWORD=
+
 MYSQL_PASSWORD=
+
 MYSQL_USER=
 
-# Biild & Run
+# Build & Run
 ```console
 docker-compose up --build
 ```

@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: mysql-client
+spec:
+  selector:
+    matchLabels:
+      app: mysql-client
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: mysql-client
+    spec:
+      containers:
+      - name: mysql-client
+        image: widdpim/mysql-client
+        command: ["sleep", "999999"]

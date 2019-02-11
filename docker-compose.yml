@@ -17,8 +17,8 @@ services:
 
   flaskapp1:
     container_name: flaskapp1
-    image: flaskapp:latest
-    build: ./flaskapp
+    image: 5gk8sapp:0.1
+    build: ./5gk8sApp
     depends_on:
       - mysql
     links:
@@ -33,8 +33,8 @@ services:
 
   flaskapp2:
     container_name: flaskapp2
-    image: flaskapp:latest
-    build: ./flaskapp
+    image: 5gk8sapp:0.1
+    build: ./5gk8sApp
     depends_on:
       - mysql
     links:
@@ -48,8 +48,8 @@ services:
 
   flaskapp3:
     container_name: flaskapp3
-    image: flaskapp:latest
-    build: ./flaskapp
+    image: 5gk8sapp:0.1
+    build: ./5gk8sApp
     depends_on:
       - mysql
     links:
@@ -63,8 +63,8 @@ services:
 
   flaskapp4:
     container_name: flaskapp4
-    image: flaskapp:latest
-    build: ./flaskapp
+    image: 5gk8sapp:0.1
+    build: ./5gk8sApp
     depends_on:
       - mysql
     links:
@@ -78,8 +78,8 @@ services:
 
   flaskapp5:
     container_name: flaskapp5
-    image: flaskapp:latest
-    build: ./flaskapp
+    image: 5gk8sapp:0.1
+    build: ./5gk8sApp
     depends_on:
       - mysql
     links:
@@ -93,8 +93,8 @@ services:
 
   flaskapp6:
     container_name: flaskapp6
-    image: flaskapp:latest
-    build: ./flaskapp
+    image: 5gk8sapp:0.1
+    build: ./5gk8sApp
     depends_on:
       - mysql
     links:
@@ -108,8 +108,8 @@ services:
 
   flaskapp7:
     container_name: flaskapp7
-    image: flaskapp:latest
-    build: ./flaskapp
+    image: 5gk8sapp:0.1
+    build: ./5gk8sApp
     depends_on:
       - mysql
     links:
@@ -123,8 +123,8 @@ services:
 
   flaskapp8:
     container_name: flaskapp8
-    image: flaskapp:latest
-    build: ./flaskapp
+    image: 5gk8sapp:0.1
+    build: ./5gk8sApp
     depends_on:
       - mysql
     links:
@@ -138,8 +138,8 @@ services:
 
   flaskapp9:
     container_name: flaskapp9
-    image: flaskapp:latest
-    build: ./flaskapp
+    image: 5gk8sapp:0.1
+    build: ./5gk8sApp
     depends_on:
       - mysql
     links:
@@ -153,8 +153,8 @@ services:
 
   flaskapp10:
     container_name: flaskapp10
-    image: flaskapp:latest
-    build: ./flaskapp
+    image: 5gk8sapp:0.1
+    build: ./5gk8sApp
     depends_on:
       - mysql
     links:
@@ -168,8 +168,8 @@ services:
 
   flaskapp11:
     container_name: flaskapp11
-    image: flaskapp:latest
-    build: ./flaskapp
+    image: 5gk8sapp:0.1
+    build: ./5gk8sApp
     depends_on:
       - mysql
     links:
@@ -183,8 +183,8 @@ services:
 
   flaskapp12:
     container_name: flaskapp12
-    image: flaskapp:latest
-    build: ./flaskapp
+    image: 5gk8sapp:0.1
+    build: ./5gk8sApp
     depends_on:
       - mysql
     links:
@@ -198,8 +198,8 @@ services:
 
   flaskapp13:
     container_name: flaskapp13
-    image: flaskapp:latest
-    build: ./flaskapp
+    image: 5gk8sapp:0.1
+    build: ./5gk8sApp
     depends_on:
       - mysql
     links:
@@ -213,8 +213,8 @@ services:
 
   flaskapp14:
     container_name: flaskapp14
-    image: flaskapp:latest
-    build: ./flaskapp
+    image: 5gk8sapp:0.1
+    build: ./5gk8sApp
     depends_on:
       - mysql
     links:
@@ -228,8 +228,8 @@ services:
 
   flaskapp15:
     container_name: flaskapp15
-    image: flaskapp:latest
-    build: ./flaskapp
+    image: 5gk8sapp:0.1
+    build: ./5gk8sApp
     depends_on:
       - mysql
     links:
@@ -243,8 +243,8 @@ services:
 
   flaskapp16:
     container_name: flaskapp16
-    image: flaskapp:latest
-    build: ./flaskapp
+    image: 5gk8sapp:0.1
+    build: ./5gk8sApp
     depends_on:
       - mysql
     links:
@@ -258,8 +258,8 @@ services:
 
   flaskapp17:
     container_name: flaskapp17
-    image: flaskapp:latest
-    build: ./flaskapp
+    image: 5gk8sapp:0.1
+    build: ./5gk8sApp
     depends_on:
       - mysql
     links:
